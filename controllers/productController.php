@@ -31,7 +31,7 @@ function getProduct($pdo){
     if( count((array)$products) > 0){
         $response = array("status" => "success", "data" => $products);
     }else{
-        $response = array("status" => "error", "message" => "");
+        $response = array("status" => "success", "data" => []);
     }
     echo json_encode($response);
 }
