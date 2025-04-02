@@ -23,7 +23,7 @@ function getCategory($pdo){
     if( count((array)$categories) > 0){
         $response = array("status" => "success", "data" => $categories);
     }else{
-        $response = array("status" => "error", "message" => "");
+        $response = array("status" => "success", "data" => []);
     }
     echo json_encode($response);
 }
@@ -43,7 +43,7 @@ switch ($opc) {
         if( $categories){
             $response = array("status" => "success", "data" => $categories);
         }else{
-            $response = array("status" => "error", "message" => "");
+            $response = array("status" => "success", "data" => []);
         }
         echo json_encode($response);
         break;
